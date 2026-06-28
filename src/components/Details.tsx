@@ -2,34 +2,36 @@ import { education } from '../data/education'
 import { achievements } from '../data/achievements'
 import { certifications } from '../data/certifications'
 import { repositories } from '../data/repositories'
+import { profile } from '../data/profile'
+import { sections } from '../config/sections'
 
 export function Details() {
   return (
     <section className="section section-white detail-section">
       <div className="container details-grid">
-        <article id="education" className="detail-card">
+        {sections.education && <article id="education" className="detail-card">
           <div className="detail-icon">◇</div><h2>Education</h2>
           <div className="education-list">{education.map((item) => (
             <div key={`${item.degree}-${item.institution}`}>
               <h3>{item.degree}</h3><p>{item.institution}</p><p>{item.duration}</p>
-              <strong>{item.degree === 'Class XII' ? 'Score' : 'CGPA'}: {item.cgpa}</strong>
+              <strong>{item.scoreLabel}: {item.cgpa}</strong>
               <ul>{item.coursework.map((course) => <li key={course}>{course}</li>)}</ul>
             </div>
           ))}</div>
-        </article>
-        <article id="achievements" className="detail-card">
+        </article>}
+        {sections.achievements && <article id="achievements" className="detail-card">
           <div className="detail-icon">♢</div><h2>Competitive Programming</h2>
           <div className="achievement-list">{achievements.map((item) => <div key={item.platform}><span><strong>{item.platform}</strong><small>{item.result}</small></span><i aria-hidden="true"><b /><b /><b /><b /></i></div>)}</div>
-        </article>
-        <article className="detail-card">
+        </article>}
+        {sections.projects && <article className="detail-card">
           <div className="detail-icon">&lt;/&gt;</div><h2>Repository Highlights</h2>
-          <p>Open-source projects and experiments from my GitHub profile.</p>
+          <p>{profile.repositoryIntro}</p>
           <div className="repo-list">{repositories.map((repo) => <a key={repo.name} href={repo.url}><strong>{repo.name}</strong><small>{repo.description} · {repo.language}</small></a>)}</div>
-        </article>
-        <article className="detail-card">
+        </article>}
+        {sections.certifications && <article className="detail-card">
           <div className="detail-icon">✦</div><h2>Certifications</h2>
           <div className="cert-list">{certifications.map((cert) => <div key={cert.title}><span>✓</span><p><strong>{cert.title}</strong><small>{cert.issuer} · {cert.year}</small></p></div>)}</div>
-        </article>
+        </article>}
       </div>
     </section>
   )

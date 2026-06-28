@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { navigation } from '../data/links'
+import { navigation } from '../config/navigation'
 import { profile } from '../data/profile'
 
 export function Header() {
@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container nav-shell">
-        <a className="logo" href="#home" aria-label="Arul Ananth home">AA<span>&lt;/&gt;</span></a>
+        <a className="logo" href="#home" aria-label={`${profile.name} home`}>{profile.logoText}<span>&lt;/&gt;</span></a>
         <button className="menu-button" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /><span /><span />
         </button>

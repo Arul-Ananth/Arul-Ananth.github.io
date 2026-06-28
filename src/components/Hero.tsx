@@ -1,5 +1,6 @@
 import { profile } from '../data/profile'
 import { socialLinks } from '../data/links'
+import { sections } from '../config/sections'
 
 export function Hero() {
   const github = socialLinks.find((link) => link.label === 'GitHub')
@@ -15,7 +16,7 @@ export function Hero() {
             {profile.heroTech.map((tech) => <span key={tech}>{tech}</span>)}
           </div>
           <div className="hero-actions">
-            <a className="button" href="#projects">View My Projects <span>→</span></a>
+            {sections.projects && <a className="button" href="#projects">View My Projects <span>→</span></a>}
             <a className="button button-secondary" href={github?.url}>GitHub</a>
             <a
               className="button button-secondary"
@@ -26,13 +27,13 @@ export function Hero() {
             >
               Resume
             </a>
-            <a className="button button-secondary" href="#contact">Contact Me</a>
+            {sections.contact && <a className="button button-secondary" href="#contact">Contact Me</a>}
           </div>
         </div>
         <div className="hero-signal" aria-hidden="true">
           <div className="code-card">
             <div className="code-top"><i /><i /><i /></div>
-            <pre><span>const</span> engineer = {'{'}{'\n'}  name: <b>'Arul'</b>,{'\n'}  builds: [<b>'web'</b>, <b>'APIs'</b>, <b>'AI'</b>],{'\n'}  mindset: <b>'ship & improve'</b>{'\n'}{'}'}</pre>
+            <pre><span>const</span> engineer = {'{'}{'\n'}  name: <b>'{profile.codeProfile.name}'</b>,{'\n'}  builds: [<b>'{profile.codeProfile.builds[0]}'</b>, <b>'{profile.codeProfile.builds[1]}'</b>, <b>'{profile.codeProfile.builds[2]}'</b>],{'\n'}  mindset: <b>'{profile.codeProfile.mindset}'</b>{'\n'}{'}'}</pre>
           </div>
           <div className="orbit orbit-one" /><div className="orbit orbit-two" />
         </div>

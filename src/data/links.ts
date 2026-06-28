@@ -5,14 +5,3 @@ export const socialLinks: Link[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/arul-ananth' },
   { label: 'Email', url: 'mailto:a.arul.ananth.2006@gmail.com' },
 ]
-
-export const navigation = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Education', href: '#education' },
-  { label: 'Achievements', href: '#achievements' },
-  { label: 'Contact', href: '#contact' },
-]

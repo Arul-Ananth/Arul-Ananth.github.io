@@ -5,10 +5,21 @@ export interface Link {
 
 export interface Profile {
   name: string
+  shortName: string
+  footerName: string
+  logoText: string
   greeting: string
   role: string
   summary: string
   about: string
+  contactHeading: string
+  contactText: string
+  repositoryIntro: string
+  codeProfile: {
+    name: string
+    builds: string[]
+    mindset: string
+  }
   email: string
   phone: string
   location: string
@@ -59,7 +70,24 @@ export interface EducationItem {
   institution: string
   duration: string
   cgpa: string
+  scoreLabel: string
   coursework: string[]
+}
+
+export type SectionKey =
+  | 'about'
+  | 'skills'
+  | 'projects'
+  | 'experience'
+  | 'education'
+  | 'achievements'
+  | 'certifications'
+  | 'contact'
+
+export interface NavigationItem {
+  label: string
+  href: string
+  section?: SectionKey
 }
 
 export interface Achievement {

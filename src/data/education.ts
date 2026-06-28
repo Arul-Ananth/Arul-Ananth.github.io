@@ -6,6 +6,7 @@ export const education: EducationItem[] = [
     institution: "St. Joseph's College of Engineering, Chennai",
     duration: '2024 — 2028 (Expected)',
     cgpa: '8.52',
+    scoreLabel: 'CGPA',
     coursework: ['Third-year undergraduate', 'Full-stack engineering', 'Backend systems', 'AI application development'],
   },
   {
@@ -13,6 +14,7 @@ export const education: EducationItem[] = [
     institution: 'D.A.V. School, Adambakkam, Chennai',
     duration: 'Completed 2024',
     cgpa: '88.6%',
+    scoreLabel: 'Score',
     coursework: ['Class X: 92% (2022)'],
   },
 ]
