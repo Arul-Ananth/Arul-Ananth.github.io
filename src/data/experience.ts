@@ -2,6 +2,19 @@ import type { ExperienceItem } from '../types/portfolio'
 
 export const experience: ExperienceItem[] = [
   {
+    role: 'AI-Native Full Stack Developer Intern',
+    company: 'KAIRIZ Technology LLP',
+    duration: 'June 2026',
+    location: 'Chennai, India',
+    description: 'Contributed to the development and refinement of the KAIRIZ.ai enterprise platform.',
+    highlights: [
+      'Integrated frontend components with backend APIs to implement autocomplete functionality.',
+      'Resolved responsive design issues across multiple screen sizes to improve usability.',
+      'Reviewed and refined website content to improve clarity, consistency, and enterprise-focused messaging.',
+    ],
+    techStack: ['React.js', 'Java', 'REST APIs'],
+  },
+  {
     role: 'Developer Intern',
     company: 'Sedin Technologies',
     duration: 'December 2025',
@@ -27,4 +40,5 @@ export const experience: ExperienceItem[] = [
     ],
     techStack: ['Angular', 'Spring Boot', 'MySQL'],
   },
+
 ]

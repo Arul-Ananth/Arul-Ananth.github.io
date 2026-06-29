@@ -8,3 +8,4 @@ vite.config.d.ts
 .agents/
 prompt.md
 ChatGPT Image*.png
+.idea
