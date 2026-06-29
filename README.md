@@ -6,6 +6,11 @@ The template requires no UI framework, deployment token, repository secret, comm
 
 ## Use this template
 
+> [!IMPORTANT]
+> **Before deploying, open the GitHub repository and go to `Settings → Pages → Build and deployment`. Change `Source` from `Deploy from a branch` to `GitHub Actions`.**
+>
+> **This is required. If branch deployment remains enabled, GitHub may publish the uncompiled React/TypeScript source instead of the Vite production build, resulting in a blank website.**
+
 1. Fork this repository or select **Use this template** on GitHub.
 2. Name the repository `<your-username>.github.io`.
 3. Clone the repository.
